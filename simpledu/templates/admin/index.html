@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Admin
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Manage</h4>
+            <br>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action {% block user_activate %} {% endblock %}">
+                    User
+                </a>
+
+                <a href="{{ url_for('admin.courses') }}"
+                   class="list-group-item list-group-item-action {% block course_activate %} {% endblock %}">
+                    Courses
+                </a>
+
+                {% block operation %}{% endblock %}
+            </div>
+
+        </div>
+        <div class="col-md-9">
+            {% block admin %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

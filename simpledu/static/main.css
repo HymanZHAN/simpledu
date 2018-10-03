@@ -1,0 +1,47 @@
+.form{
+    width: 400px;
+    margin: 0 auto;
+}
+
+.navbar-brand{
+    margin-left: 30px;
+}
+.my-2{
+    margin-right: 30px;
+}
+
+.errors{
+    color: red;
+
+}
+
+.card{
+    padding: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+a,
+a:link,
+a:visited,
+a:hover{
+    text-decoration: none !important;
+    color: #000;
+}
+
+.course-description,
+.course-name{
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+}
+
+.button_svg{
+    display: inline-block;
+}

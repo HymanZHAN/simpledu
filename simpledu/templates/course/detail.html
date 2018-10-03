@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+  Course - {{ course.name }}
+{% endblock %}
+
+{% block body %}
+  <div class="jumbotron">
+    <h1 class="display-4">{{ course.name }}</h1>
+    <hr class="my-4">
+    <p class="lead">{{ course.description }}</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h5>Table of Content</h5>
+      <ul class="list-group">
+        {% for chapter in course.chapters %}
+          <a class= "list-group-item" href="{{ chapter.url }}" style="color: #000">
+            <span aria-hidden="true">
+              <img src="/../../static/open-iconic/svg/play-circle.svg" alt="play" style="height: 85%">
+              &nbsp;
+              {{ chapter.name }} &nbsp; ({{ chapter.video_duration }})
+            </span>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <h5>Course Instructor</h5>
+      <div class="media">
+        <img class="mr-3" src="..." alt="Avatar">
+        <div class="media-body">
+          <h5 class="mt-0">{{ course.author.username }}</h5>
+          <p>{{ course.author.job }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
